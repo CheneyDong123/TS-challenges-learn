@@ -35,6 +35,6 @@ function omit(T, K) {
 // 总结
 // 1. 对象中遍历一个数组可以使用 in 操作符
 // 2. 使用内置 Generic(泛型)--Exclude<T, K> 删除 T 中的 K 元素
-// 3. 使用内置泛型 Pick<T, K> 只保留 T 中的 K 元素
+// 3. 使用内置泛型 Pick<T, K> 提取 T 中的 K 元素
 // 4、使用 as 来判断是否保留元素。即 (P in keyof T) as (P extends K ? never : P) 当 P 在 K 中时，返回 never，否则返回 P
 // 当返回 never 时，as 将 P 断言为 never。即去除了当前 P 元素
