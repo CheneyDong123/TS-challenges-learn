@@ -4,13 +4,5 @@ type PartialByKeys<T, K = keyof T> =
     {[P in keyof O]: O[P]}
   ) : never
 
-  interface User {
-    name: string
-    age: number
-    address: string
-  }
-
-type dkkdkdk = PartialByKeys<PartialByKeys<User, 'name' | 'age'>>
-
 // 总结
 // 利用 extends infer O 来将由 & 合并的对象转化为一个对象
