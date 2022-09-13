@@ -1,10 +1,5 @@
 type BEM<B extends string, E extends string[], M extends string[]> 
-= `${B}${E extends [] ? "" : `__${E[number]}`}${M extends [] ? "" : `--${E[number]}`}`;
-
-
-type afjaj<T extends string[]> = T[number]
-
-type jalgjaj = afjaj<["a", "b", "c"]>
+= `${B}${E extends [] ? "" : `__${E[number]}`}${M extends [] ? "" : `--${M[number]}`}`;
 
 // 总结
 // 1. 使用 T[number] 来自动遍历，获取类型
