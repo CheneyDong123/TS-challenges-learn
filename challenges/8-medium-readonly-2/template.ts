@@ -16,13 +16,11 @@ function readonly2(T, K) {
     }
   }
 
-  if (!K.lenght) {
-    for (let i = 0; i < T.length; i++) {
-      result["readonly" + i] = T[i];
-    }
-  } else {
-    for (let i = 0; i < K.length; i++) {
-      result["readonly" + K[i]] = T[K[i]];
+  for(let obj in T) {
+    if (K.includes(obj)) {
+      result["readonly" + obj] = T[obj];
+    } else {
+      result[obj] = T[obj];
     }
   }
 
