@@ -1,5 +1,5 @@
 // type TupleToObject<T extends readonly any[]> = any
-type TupleToObject<T extends readonly (string | number | symbol)[]> = {
+type TupleToObject<T extends readonly PropertyKey[]> = {
   [P in T[number]]: P
 }
 
@@ -21,4 +21,4 @@ function tupleToObject(tuple) {
 //   1. union 使用 in 可直接遍历
 //   2. interface 使用 keyof 取出所有类型，再使用 in 遍历
 //   3. 数组使用 T[number] 取出所有类型， 再使用 in 遍历
-// 4. 数组类型中只能有 string | number | symbol 类型
+// 4. 数组类型中只能有 string | number | symbol 类型, 即 Propertykey

@@ -22,4 +22,5 @@ function First(array) {
 // 2. 使用 extends 进行条件判断
 // 3. 可以使用 T['length'] 来访问数组的 length     关键字：indexed
 // 4. 当使用 T[number] 对数组进行遍历时，返回的类型为一个 union
+// - https://www.typescriptlang.org/docs/handbook/2/indexed-access-types.html
 // 5. 解法四类似于 js 中的解构赋值，不同的是 ts 中是将类型进行提取，并与 infer 搭配使用
